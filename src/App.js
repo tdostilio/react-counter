@@ -3,6 +3,7 @@ import logo from './logo.svg';
 import './App.css';
 import Counter from './Counter.js';
 import AddCounterButton from './Add_Counter_Button.js';
+import RemoveCounterButton from './Remove_Counter_Button.js';
 
 class App extends Component {
   constructor(props) {
@@ -23,6 +24,8 @@ class App extends Component {
         <div>{this.state.componentList}</div>
         <AddCounterButton
           changeHandler={this._AddCounter}/>
+        <RemoveCounterButton
+          changeHandler={this._RemoveCounter}/>
       </div>
     )}
 
@@ -32,6 +35,13 @@ class App extends Component {
             componentList: this.state.componentList.concat([<Counter/>])
         })
     } 
+  
+  _RemoveCounter = (e) => {
+        e.preventDefault();
+        this.setState({
+            componentList: this.state.componentList.slice(0,this.state.componentList.length-1)
+        })
+    }   
   
 }
 
