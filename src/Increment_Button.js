@@ -8,7 +8,6 @@ const IncrementButton = ({changeHandler}) => {
         <button className="increment-button" 
       onClick={changeHandler}>+</button>
     )
-
 }
 
 
