@@ -28,16 +28,14 @@ class Counter extends Component {
         );
     }
 
-    _AddValue = (e) => {
-        e.preventDefault();
+    _AddValue = (amt) => {
         this.setState({
-            value: this.state.value + 1
+            value: this.state.value + amt
         })
     } 
-    _SubtractValue = (e) => {
-        e.preventDefault();
+    _SubtractValue = (amt) => {
         this.setState({
-            value: this.state.value - 1
+            value: this.state.value + amt
         })
     } 
 }
